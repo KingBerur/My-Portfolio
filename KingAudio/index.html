@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KingAudio | Professional Audio Mastering</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="6"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+        </svg>
+        <span>KingAudio</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Samples</a></li>
+        <li><a href="#">Plugins</a></li>
+        <li><a href="#" class="active">Mastering</a></li>
+        <li><a href="#">Distribution</a></li>
+        <li><a href="#">Community <i data-feather="chevron-down" class="feather-sm"></i></a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </div>
+    
+    <div class="nav-right">
+      <div class="nav-item"><i data-feather="list"></i> Library</div>
+      <div class="nav-item"><i data-feather="search"></i></div>
+      <div class="nav-item"><i data-feather="monitor"></i></div>
+      <div class="nav-item"><i data-feather="mail"></i></div>
+      <div class="nav-item bell">
+        <i data-feather="bell"></i>
+        <span class="badge">1</span>
+      </div>
+      <div class="avatar">
+        <img src="../images/about.png" alt="User">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    
+    <!-- Library Header -->
+    <header class="library-header">
+      <h1>Library</h1>
+      <div class="header-actions">
+        <div class="search-box">
+          <i data-feather="search"></i>
+          <input type="text" placeholder="Search by name, ISRC or UPC">
+        </div>
+        <button class="btn btn-primary"><i data-feather="plus"></i> New</button>
+        <button class="btn btn-icon"><i data-feather="settings"></i></button>
+      </div>
+    </header>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-dropdown">All files <i data-feather="chevron-down"></i></button>
+      <div class="premium-upsell">
+        <i data-feather="award" class="crown-icon"></i> Get unlimited masters
+      </div>
+    </div>
+
+    <!-- File Table -->
+    <table class="file-table">
+      <thead>
+        <tr>
+          <th class="col-checkbox"><input type="checkbox"></th>
+          <th class="col-name">Name <i data-feather="chevron-down" class="feather-sm"></i></th>
+          <th class="col-created">Created <i data-feather="arrow-down" class="feather-sm"></i></th>
+          <th class="col-size">Size</th>
+          <th class="col-channels">Channels</th>
+          <th class="col-actions"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="file-row" id="row-1">
+          <td class="col-checkbox"><input type="checkbox"></td>
+          <td class="col-name">
+            <div class="file-info">
+              <div class="file-icon"><i data-feather="music"></i></div>
+              <div class="file-details">
+                <span class="track-title">SUB DJ BERUR (1)</span>
+                <span class="track-meta">MP3 <span class="tag">ORIGINAL</span></span>
+              </div>
+            </div>
+          </td>
+          <td class="col-waveform">
+            <!-- Simulated waveform -->
+            <div class="waveform">
+              <div class="bar h-2"></div><div class="bar h-4"></div><div class="bar h-3"></div><div class="bar h-5"></div>
+              <div class="bar h-8"></div><div class="bar h-6"></div><div class="bar h-3"></div><div class="bar h-4"></div>
+              <div class="bar h-2"></div><div class="bar h-3"></div><div class="bar h-4"></div><div class="bar h-6"></div>
+              <div class="bar h-9"></div><div class="bar h-5"></div><div class="bar h-7"></div><div class="bar h-4"></div>
+              <div class="bar h-3"></div><div class="bar h-5"></div><div class="bar h-4"></div><div class="bar h-2"></div>
+              <div class="bar h-3"></div><div class="bar h-5"></div><div class="bar h-4"></div><div class="bar h-2"></div>
+              <span class="duration">0:13</span>
+            </div>
+          </td>
+          <td class="col-created">a few seconds ago</td>
+          <td class="col-size">209.39 kB</td>
+          <td class="col-channels"></td>
+          <td class="col-actions action-icons">
+            <button class="action-btn"><i data-feather="bar-chart-2"></i></button>
+            <button class="action-btn"><i data-feather="download"></i></button>
+            <button class="action-btn"><i data-feather="corner-up-right"></i></button>
+            <button class="action-btn"><i data-feather="more-horizontal"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+
+  <!-- Processing Toast Notification -->
+  <div class="processing-toast">
+    <div class="toast-header">
+      <span>Processing (1)</span>
+      <button class="clear-btn">Clear all <i data-feather="chevron-down" class="feather-sm"></i></button>
+    </div>
+    <div class="toast-body">
+      <div class="spinner"></div>
+      <div class="toast-details">
+        <span class="track-name">SUB DJ BERUR (1)</span>
+        <span class="track-status">Applying magic touch...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mastering Modal Overlay -->
+  <div class="modal-overlay" id="masteringModal">
+    <div class="modal-content">
+      
+      <div class="modal-top">
+        <button class="icon-btn close-modal"><i data-feather="arrow-left"></i></button>
+        <button class="icon-btn close-modal-x"><i data-feather="x"></i></button>
+      </div>
+
+      <div class="modal-body">
+        <h2 class="modal-track-title">SUB DJ BERUR (1).mp3</h2>
+        
+        <!-- Circular Player -->
+        <div class="circular-player">
+          <div class="orbit">
+            <div class="orbit-dot"></div>
+          </div>
+          <button class="play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+
+        <!-- Original / Master Toggle -->
+        <div class="comparison-toggle">
+          <span class="toggle-label">Original</span>
+          <label class="switch">
+            <input type="checkbox" id="masterToggle" checked>
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle-label active" id="masterLabel">Master</span>
+        </div>
+
+        <!-- Volume Match -->
+        <div class="volume-match">
+          <label class="checkbox-container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Volume match
+          </label>
+          <i data-feather="info" class="info-icon"></i>
+        </div>
+
+        <!-- Mode Segmented Control -->
+        <div class="segmented-control">
+          <button class="segment active">KingAudio Master</button>
+          <button class="segment">Reference</button>
+        </div>
+
+        <!-- Style Selector -->
+        <div class="style-selector">
+          <div class="style-header">
+            <span>Style</span>
+            <i data-feather="info" class="info-icon"></i>
+          </div>
+          <div class="style-pills">
+            <button class="style-pill">Warm</button>
+            <button class="style-pill active">Balanced</button>
+            <button class="style-pill">Open</button>
+          </div>
+        </div>
+
+        <!-- Create Button -->
+        <button class="btn-create-master">Create Master</button>
+
+        <!-- Upsell Footer -->
+        <div class="modal-footer">
+          <i data-feather="award" class="crown-icon"></i>
+          <span>Unlock unlimited mastering. <a href="#">Learn more</a></span>
+        </div>
+
+      </div>
+    </div>
+  <!-- Portfolio Exit Button -->
+  <a href="../web-dev/index.html" style="position: fixed; bottom: 30px; right: 30px; background-color: #00e5ff; color: #121212; padding: 12px 24px; border-radius: 50px; font-family: 'Inter', sans-serif; font-weight: 700; text-decoration: none; box-shadow: 0 10px 25px rgba(0,229,255,0.4); z-index: 9999; display: flex; align-items: center; gap: 8px; transition: 0.2s transform;">
+    <i data-feather="arrow-left"></i> Exit Preview
+  </a>
+
+  <script>
+    feather.replace();
+
+    // Simple interactions for prototype
+    const row = document.getElementById('row-1');
+    const modal = document.getElementById('masteringModal');
+    const closeBtns = document.querySelectorAll('.close-modal, .close-modal-x');
+    const toggleInput = document.getElementById('masterToggle');
+    const masterLabel = document.getElementById('masterLabel');
+    const originalLabel = document.querySelector('.toggle-label:not(.active)');
+
+    row.addEventListener('click', () => {
+      modal.classList.add('active');
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        modal.classList.remove('active');
+      });
+    });
+
+    // Style pills functionality
+    const stylePills = document.querySelectorAll('.style-pill');
+    stylePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        stylePills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+      });
+    });
+
+    // Segmented control
+    const segments = document.querySelectorAll('.segment');
+    segments.forEach(segment => {
+      segment.addEventListener('click', () => {
+        segments.forEach(s => s.classList.remove('active'));
+        segment.classList.add('active');
+      });
+    });
+
+    // Toggle Original/Master Switch logic
+    toggleInput.addEventListener('change', () => {
+      if (toggleInput.checked) {
+        masterLabel.classList.add('active');
+        masterLabel.previousElementSibling.previousElementSibling.classList.remove('active');
+      } else {
+        masterLabel.classList.remove('active');
+        masterLabel.previousElementSibling.previousElementSibling.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

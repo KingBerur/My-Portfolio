@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOFLY | Premium Apparel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Using Montserrat for clean geometric headings and bold premium look -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="#" class="nav-link">SHOP</a>
+      <a href="#" class="nav-link">ABOUT</a>
+      <a href="#" class="nav-link">REVIEWS</a>
+    </div>
+
+    <div class="nav-center">
+      <a href="#" class="logo">SOFLY</a>
+    </div>
+
+    <div class="nav-right">
+      <!-- Added a placeholder Back to Portfolio link optionally -->
+      <a href="../web-dev/index.html" class="nav-icon-link" aria-label="Go Back">
+        <i data-feather="corner-up-left" class="icon-sm"></i>
+      </a>
+      <a href="#" class="btn-signin">
+        <i data-feather="log-in" class="icon-sm"></i> Sign In
+      </a>
+      <a href="#" class="nav-icon-link">
+        <i data-feather="shopping-bag" class="icon-sm"></i>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-top-accent">
+        <div class="cube-icon">
+          <!-- A simple SVG or text icon to emulate the small box in the image -->
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="badge">PHOENIX COLLECTION 2026</div>
+      </div>
+      
+      <h1 class="hero-title">
+        THE ART OF<br>
+        <span class="gradient-text">ELEGANCE.</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Experience the pinnacle of creative expression with the Sofly<br>
+        Collection. Meticulously crafted for those who define the<br>
+        future.
+      </p>
+    </section>
+
+    <!-- CATEGORIES / COLLECTIONS -->
+    <section class="collections">
+      <div class="col-card essentials">
+        <div class="col-overlay">
+          <h2>The Essentials</h2>
+          <p>EVERYDAY BASICS, ELEVATED.</p>
+        </div>
+      </div>
+      <div class="col-card outerwear">
+        <div class="col-overlay">
+          <h2>Outerwear</h2>
+          <p>BRAVE THE ELEMENTS IN STYLE.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+      <div class="about-icon">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </div>
+      <h2 class="about-title">We Are<br>Sofly.</h2>
+      <p class="about-desc">
+        Born from a desire to break the mold, Sofly is more than just an apparel brand. We<br>
+        are a movement. A testament to creativity, dynamic design, and premium quality.<br><br>
+        Every piece in our collection is meticulously crafted with a focus on monochromatic aesthetics,<br>
+        blending striking silhouettes with everyday comfort. We believe that what you wear is how you<br>
+        present yourself to the world.
+      </p>
+    </section>
+
+    <!-- PRODUCT DETAIL PREVIEW -->
+    <section class="product-preview">
+      <div class="product-container">
+        <div class="prod-image">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Minimalist Tee on Model">
+        </div>
+        
+        <div class="prod-details">
+          <div class="breadcrumbs">Home / Shop / Minimalist Tee</div>
+          <h1 class="prod-title">MINIMALIST TEE</h1>
+          <div class="prod-price">KSh 5,800</div>
+          
+          <p class="prod-desc">
+            The perfect white tee. Crisp, clean, and essential for every wardrobe.
+          </p>
+          
+          <div class="prod-options">
+            <span class="option-label">SELECT SIZE</span>
+            <div class="size-group">
+              <button class="size-btn">S</button>
+              <button class="size-btn active">M</button>
+              <button class="size-btn">L</button>
+              <button class="size-btn">XL</button>
+            </div>
+          </div>
+
+          <div class="prod-actions">
+            <div class="qty-control">
+              <button class="qty-btn" id="qty-minus">-</button>
+              <span class="qty-val" id="qty-value">1</span>
+              <button class="qty-btn" id="qty-plus">+</button>
+            </div>
+            <button class="btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Portfolio Exit Button -->
+  <a href="../web-dev/index.html" style="position: fixed; bottom: 30px; right: 30px; background-color: #fff; color: #000; padding: 12px 24px; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-weight: 700; text-decoration: none; box-shadow: 0 10px 25px rgba(255,255,255,0.3); z-index: 9999; display: flex; align-items: center; gap: 8px; transition: 0.2s transform;">
+    <i data-feather="arrow-left"></i> Exit Preview
+  </a>
+
+  <script>
+    feather.replace();
+
+    // Size Selection Logic
+    const sizeBtns = document.querySelectorAll('.size-btn');
+    sizeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sizeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    // Quantity Logic
+    const qtyMinus = document.getElementById('qty-minus');
+    const qtyPlus = document.getElementById('qty-plus');
+    const qtyValueDisplay = document.getElementById('qty-value');
+    let qty = 1;
+
+    qtyMinus.addEventListener('click', () => {
+      if (qty > 1) {
+        qty--;
+        qtyValueDisplay.textContent = qty;
+      }
+    });
+
+    qtyPlus.addEventListener('click', () => {
+      qty++;
+      qtyValueDisplay.textContent = qty;
+    });
+  </script>
+</body>
+</html>

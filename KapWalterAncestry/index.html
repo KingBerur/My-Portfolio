@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KapWalter Ancestry</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+  <!-- Decorative Botanical Leaves Background -->
+  <div class="watermark-leaves">
+    <svg viewBox="0 0 200 200" fill="rgba(60, 100, 70, 0.05)" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100,0 C150,50 200,100 100,200 C0,100 50,50 100,0 Z"></path>
+      <path d="M150,50 C200,100 150,200 50,150 C0,100 100,0 150,50 Z" transform="scale(0.8) translate(20, 20)"></path>
+    </svg>
+  </div>
+
+  <!-- Header Controls -->
+  <header class="app-header">
+    <div class="header-controls">
+      <button class="btn btn-primary">Fit View</button>
+      <button class="btn btn-outline">Export .txt</button>
+    </div>
+    
+    <h1 class="main-title">KapWalter Ancestry</h1>
+    
+    <div class="header-spacing"></div>
+  </header>
+
+  <!-- Tree Canvas / Panning Area Placeholder -->
+  <main class="tree-canvas">
+    
+    <!-- Level 1: Grandparents -->
+    <div class="tree-level level-1">
+      <div class="node-wrapper" style="margin-right: 300px;">
+        <div class="tree-node">
+          <div class="node-avatar">RD</div>
+          <div class="node-name">Robert Doe</div>
+          <div class="node-dates">1930 - 1995</div>
+        </div>
+      </div>
+      
+      <div class="node-wrapper" style="margin-left: 300px;">
+        <div class="tree-node">
+          <div class="node-avatar">MJ</div>
+          <div class="node-name">Mary Johnson</div>
+          <div class="node-dates">1935 - 2010</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Connecting lines Level 1 to Level 2 -->
+    <!-- Simplified SVG lines for the exact shape required -->
+    <svg class="connection-lines" width="900" height="100" style="position: absolute; top: 160px; pointer-events: none;">
+      <!-- Robert Doe to John Doe -->
+      <path d="M100,0 Q100,80 450,100" fill="none" stroke="#2c5e3a" stroke-width="2"/>
+      <!-- Mary Johnson to John Doe -->
+      <path d="M800,0 Q800,80 450,100" fill="none" stroke="#2c5e3a" stroke-width="2"/>
+    </svg>
+
+    <!-- Level 2: Parents -->
+    <div class="tree-level level-2" style="position: relative; margin-top: 50px;">
+      <div class="node-wrapper spouse-group">
+        <div class="tree-node primary-node">
+          <div class="node-avatar">JD</div>
+          <div class="node-name">John Doe</div>
+          <div class="node-dates">1960 -</div>
+        </div>
+        
+        <!-- Dashed spousal line -->
+        <div class="spouse-connector"></div>
+
+        <div class="tree-node">
+          <div class="node-avatar">JS</div>
+          <div class="node-name">Jane Smith</div>
+          <div class="node-dates">1962 -</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Connecting lines Level 2 to Level 3 -->
+    <svg class="connection-lines" width="600" height="80" style="position: absolute; top: 350px; left: 50%; transform: translateX(-50%); pointer-events: none;">
+      <!-- Drop down from spouse line -->
+      <path d="M300,0 L300,40" fill="none" stroke="#2c5e3a" stroke-width="2"/>
+      <!-- Horizontal spread -->
+      <path d="M100,40 L500,40" fill="none" stroke="#2c5e3a" stroke-width="2"/>
+      <!-- Drops down to children -->
+      <path d="M100,40 L100,80" fill="none" stroke="#2c5e3a" stroke-width="2"/>
+      <path d="M300,40 L300,80" fill="none" stroke="#2c5e3a" stroke-width="2"/>
+      <path d="M500,40 L500,80" fill="none" stroke="#2c5e3a" stroke-width="2"/>
+    </svg>
+
+    <!-- Level 3: Children -->
+    <div class="tree-level level-3" style="position: relative; margin-top: 50px;">
+      <div class="node-wrapper" style="margin-right: 20px;">
+        <div class="tree-node">
+          <div class="node-avatar">JD</div>
+          <div class="node-name">Jimmy Doe</div>
+          <div class="node-dates">1985 -</div>
+        </div>
+      </div>
+      
+      <div class="node-wrapper" style="margin-right: 20px;">
+        <div class="tree-node">
+          <div class="node-avatar">SD</div>
+          <div class="node-name">Sarah Doe</div>
+          <div class="node-dates">1988 -</div>
+        </div>
+      </div>
+
+      <div class="node-wrapper">
+        <div class="tree-node add-node">
+          <div class="add-icon">
+            <i data-feather="plus"></i>
+          </div>
+          <div class="node-name">Add Child</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Portfolio Exit Button -->
+  <a href="../web-dev/index.html" style="position: fixed; bottom: 30px; right: 30px; background-color: #2c5e3a; color: #fff; padding: 12px 24px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-weight: 600; text-decoration: none; box-shadow: 0 10px 25px rgba(44,94,58,0.4); z-index: 9999; display: flex; align-items: center; gap: 8px; transition: 0.2s transform;">
+    <i data-feather="arrow-left"></i> Exit Preview
+  </a>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>

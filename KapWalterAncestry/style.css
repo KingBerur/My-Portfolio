@@ -1,0 +1,221 @@
+:root {
+  --primary-color: #2c5e3a; /* Deep botanical green */
+  --light-green: #e9f2eb;
+  --node-bg: #ffffff;
+  --node-border: #b8d4c1;
+  --text-dark: #2a332c;
+  --text-gray: #828c85;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fbfdfc;
+  color: var(--text-dark);
+  min-height: 100vh;
+  overflow: auto;
+  position: relative;
+}
+
+/* Watermark */
+.watermark-leaves {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.watermark-leaves svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Header */
+.app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  z-index: 10;
+}
+
+.header-controls {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #1e452a;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--text-gray);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-color);
+}
+
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  flex: 1;
+}
+
+.header-spacing {
+  flex: 1;
+}
+
+/* Canvas Area */
+.tree-canvas {
+  padding-top: 120px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.tree-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.spouse-group {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+}
+
+.spouse-connector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 2px;
+  border-top: 2px dashed var(--primary-color);
+  z-index: 1;
+}
+
+/* Node Styles */
+.tree-node {
+  width: 160px;
+  background-color: var(--node-bg);
+  border: 1px solid var(--node-border);
+  border-radius: 16px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.tree-node:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.primary-node {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 10px 30px rgba(44, 94, 58, 0.1);
+}
+
+.node-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--node-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  background-color: var(--node-bg);
+}
+
+.node-name {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.node-dates {
+  font-size: 11px;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.add-node {
+  border: 2px dashed #c0d1c5;
+  background-color: rgba(255,255,255,0.6);
+  justify-content: center;
+  padding: 30px 16px;
+  box-shadow: none;
+}
+
+.add-node:hover {
+  background-color: #fff;
+  border-color: var(--primary-color);
+}
+
+.add-icon {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.add-icon i {
+  stroke-width: 3;
+}
+
+.add-node .node-name {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0;
+}

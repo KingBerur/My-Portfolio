@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Cadastre</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+  <!-- Fullscreen Satellite Background -->
+  <div class="map-bg"></div>
+
+  <!-- Simulated interactive red polygon on map -->
+  <div class="polygon">
+    <svg width="100" height="80" viewBox="0 0 100 80">
+      <polygon points="10,10 90,20 85,75 15,65" fill="rgba(255, 0, 0, 0.3)" stroke="red" stroke-width="2"/>
+    </svg>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="logo-box">DC</div>
+      <span class="logo-text">Digital Cadastre</span>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" value="NBO-123" placeholder="Enter Title Deed Number">
+      <button class="search-btn">Search</button>
+    </div>
+  </header>
+
+  <!-- Deed Info Card Overlay -->
+  <div class="info-card">
+    <h2 class="card-title">Deed NBO-123</h2>
+    
+    <div class="details">
+      <p><span>Owner:</span> Land Registry Office</p>
+      <p><span>Area:</span> 0.25 Hectares</p>
+      <p><span>Type:</span> Freehold</p>
+    </div>
+
+    <div class="badge">Verified</div>
+
+    <div class="card-footer">
+      <i data-feather="shield" class="shield-icon"></i>
+      Secured on Polygon Blockchain
+    </div>
+  </div>
+
+  <!-- Portfolio Exit Button -->
+  <a href="../web-dev/index.html" style="position: fixed; bottom: 30px; right: 30px; background-color: #f43f5e; color: #fff; padding: 12px 24px; border-radius: 50px; font-family: 'Inter', sans-serif; font-weight: 600; text-decoration: none; box-shadow: 0 10px 25px rgba(244,63,94,0.4); z-index: 9999; display: flex; align-items: center; gap: 8px; transition: 0.2s transform;">
+    <i data-feather="arrow-left"></i> Exit Preview
+  </a>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
