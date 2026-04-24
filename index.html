@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KingBerurInc | Photography & Videography by Ryan Berur</title>
+  <meta name="description"
+    content="KingBerurInc — Premium photography and videography by Ryan Berur. Portraits, events, fashion, and cinematic film work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===================== LOADER ===================== -->
+  <div id="loader" class="loader">
+    <div class="loader__inner">
+      <span class="loader__brand">KingBerurInc</span>
+      <div class="loader__bar"></div>
+    </div>
+  </div>
+
+  <div class="wave-bg"></div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header id="header" class="header">
+    <div class="header__inner">
+      <a href="#home" class="logo" id="nav-logo">
+        <span class="logo__king">King</span><span class="logo__berur">BerurInc</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav__link" id="nav-home">Home</a>
+        <a href="#portfolio" class="nav__link" id="nav-portfolio">Portfolio</a>
+        <a href="#about" class="nav__link" id="nav-about">About</a>
+        <a href="#contact" class="nav__link" id="nav-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="hero">
+    <div class="hero__bg" id="hero-bg"
+      style="background-image:url('images/gallery5.png'); background-position: center top;"></div>
+    <div class="hero__grain"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal-up">Photography &amp; Videography</p>
+      <h1 class="hero__title reveal-up">
+        I don't just shoot visuals. <br />
+        I craft stories that slap.
+      </h1>
+      <hr class="hero__sep reveal-up" />
+      <p class="hero__tagline reveal-up">Cinematography. Editing. Color. Direction. Raw and Relentless.</p>
+      <a href="#portfolio" class="btn btn--outline reveal-up" id="hero-cta">View Portfolio</a>
+    </div>
+    <a href="#portfolio" class="hero__scroll" aria-label="Scroll down" id="hero-scroll">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-text">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <div class="section__header reveal-up">
+        <p class="section__label">Work</p>
+        <h2 class="section__title">Portfolio</h2>
+        <p class="section__desc">A curated selection of portraits, events, and cinematic work.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal-up" id="filter-tabs">
+        <button class="filter-tab active" data-filter="all" id="tab-all">All</button>
+        <button class="filter-tab" data-filter="photography" id="tab-photography">Photography</button>
+        <button class="filter-tab" data-filter="videography" id="tab-videography">Videography</button>
+        <button class="filter-tab" data-filter="portrait" id="tab-portrait">Portraits</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery" id="gallery">
+
+        <div class="gallery__item" data-category="photography" id="gitem-1">
+          <img src="images/gallery_new_3.jpg" alt="Cinematic scene 1" loading="lazy" />
+          <div class="gallery__overlay">
+            <span class="gallery__cat">Photography</span>
+            <p class="gallery__title">The Awakening</p>
+          </div>
+        </div>
+        <div class="gallery__item" data-category="photography" id="gitem-2">
+          <img src="images/gallery_new_1.jpg" alt="Cinematic scene 2" loading="lazy" />
+          <div class="gallery__overlay">
+            <span class="gallery__cat">Photography</span>
+            <p class="gallery__title">Urban Rhythm</p>
+          </div>
+        </div>
+        <div class="gallery__item" data-category="photography" id="gitem-3">
+          <img src="images/gallery_new_2.jpg" alt="Cinematic scene 3" loading="lazy" />
+          <div class="gallery__overlay">
+            <span class="gallery__cat">Photography</span>
+            <p class="gallery__title">Golden Hour</p>
+          </div>
+        </div>
+        <div class="gallery__item" data-category="photography" id="gitem-4">
+          <img src="images/gallery4.png" alt="Silent Observers" loading="lazy" />
+          <div class="gallery__overlay">
+            <span class="gallery__cat">Photography</span>
+            <p class="gallery__title">Silent Observers</p>
+          </div>
+        </div>
+        <div class="gallery__item" data-category="portrait" id="gitem-5">
+          <img src="images/about.png" alt="Ryan Berur portrait" loading="lazy" />
+          <div class="gallery__overlay">
+            <span class="gallery__cat">Portrait</span>
+            <p class="gallery__title">Monochrome Soul</p>
+          </div>
+        </div>
+        <div class="gallery__item" data-category="videography" id="gitem-6">
+          <img src="images/gallery5.png" alt="Videography behind the scenes" loading="lazy" />
+          <div class="gallery__overlay">
+            <span class="gallery__cat">Videography</span>
+            <p class="gallery__title">Behind The Lens</p>
+          </div>
+        </div>
+
+      </div><!-- /gallery -->
+    </div>
+  </section>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" id="lightbox-prev" aria-label="Previous">&#8592;</button>
+    <button class="lightbox__next" id="lightbox-next" aria-label="Next">&#8594;</button>
+    <div class="lightbox__content">
+      <img class="lightbox__img" id="lightbox-img" src="" alt="Portfolio image enlarged" />
+      <p class="lightbox__caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="about section">
+    <div class="container about__grid">
+      <div class="about__media reveal-left">
+        <div class="about__passport-wrap">
+          <img src="images/about.png" alt="Ryan Berur — founder of KingBerurInc"
+            class="about__img about__img--passport" />
+        </div>
+        <div class="about__badge">
+          <span class="about__badge-number">3+</span>
+          <span class="about__badge-text">Years of<br />Experience</span>
+        </div>
+      </div>
+      <div class="about__text reveal-right">
+        <p class="section__label">The Artist</p>
+        <h2 class="section__title">Ryan Berur</h2>
+        <p class="about__bio">
+          I'm <strong>Ryan Berur</strong>, the creative mind behind <strong>KingBerurInc</strong> —
+          a photography and videography brand built on the belief that every moment deserves to be
+          told beautifully. From dramatic portraits to cinematic event films, I bring a sharp eye,
+          a steady hand, and a passion for visual storytelling.
+        </p>
+        <p class="about__bio">
+          Whether it's capturing the raw emotion of a crowd or the quiet intensity of a solo portrait,
+          I work with light, composition, and narrative to create images and films that last.
+        </p>
+        <div class="about__skills">
+          <div class="skill" id="skill-1">
+            <span class="skill__icon">&#128247;</span>
+            <span class="skill__name">Photography</span>
+          </div>
+          <div class="skill" id="skill-2">
+            <span class="skill__icon">&#127909;</span>
+            <span class="skill__name">Videography</span>
+          </div>
+          <div class="skill" id="skill-3">
+            <span class="skill__icon">&#9881;</span>
+            <span class="skill__name">Post-Production</span>
+          </div>
+          <div class="skill" id="skill-4">
+            <span class="skill__icon">&#127775;</span>
+            <span class="skill__name">Event Coverage</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn--gold" id="about-cta">Work With Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="services section section--dark">
+    <div class="container">
+      <div class="section__header reveal-up">
+        <p class="section__label section__label--light">Offerings</p>
+        <h2 class="section__title section__title--light">Services</h2>
+      </div>
+      <div class="services__grid">
+        <div class="service-card reveal-up" id="svc-1">
+          <div class="service-card__icon">&#128247;</div>
+          <h3 class="service-card__title">Portrait Sessions</h3>
+          <p class="service-card__desc">Personal, professional, and editorial portraits crafted to showcase who you are.
+          </p>
+        </div>
+        <div class="service-card reveal-up" id="svc-2">
+          <div class="service-card__icon">&#127916;</div>
+          <h3 class="service-card__title">Event Films</h3>
+          <p class="service-card__desc">Cinematic coverage of your events — from weddings to corporate functions.</p>
+        </div>
+        <div class="service-card reveal-up" id="svc-3">
+          <div class="service-card__icon">&#127760;</div>
+          <h3 class="service-card__title">Commercial Shoots</h3>
+          <p class="service-card__desc">Brand photography and promotional videos that make your business stand out.</p>
+        </div>
+        <div class="service-card reveal-up" id="svc-4">
+          <div class="service-card__icon">&#9999;</div>
+          <h3 class="service-card__title">Short Films</h3>
+          <p class="service-card__desc">Narrative storytelling — concept to finished film with full post-production.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact section">
+    <div class="container contact__grid">
+      <div class="contact__info reveal-left">
+        <p class="section__label">Get In Touch</p>
+        <h2 class="section__title">Let's Create<br />Something.</h2>
+        <p class="contact__desc">Have a project in mind? I'd love to bring your vision to life. Reach out and let's
+          talk.</p>
+        <ul class="contact__details">
+          <li id="contact-email">
+            <span class="contact__detail-icon">&#9993;</span>
+            <a href="mailto:ryanberur77@gmail.com">ryanberur77@gmail.com</a>
+          </li>
+          <li id="contact-location">
+            <span class="contact__detail-icon">&#128205;</span>
+            <span>Nairobi, Kenya</span>
+          </li>
+        </ul>
+        <div class="social-links" id="social-links">
+          <a href="#" class="social-link" id="social-ig" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="#" class="social-link" id="social-yt" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22.54 6.42a2.79 2.79 0 00-1.96-1.96C18.88 4 12 4 12 4s-6.88 0-8.58.46A2.79 2.79 0 001.46 6.42 29.5 29.5 0 001 12a29.5 29.5 0 00.46 5.58 2.79 2.79 0 001.96 1.96C5.12 20 12 20 12 20s6.88 0 8.58-.46a2.79 2.79 0 001.96-1.96A29.5 29.5 0 0023 12a29.5 29.5 0 00-.46-5.58z" />
+              <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="#" class="social-link" id="social-tw" aria-label="Twitter/X">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <form class="contact__form reveal-right" id="contact-form" novalidate>
+        <div class="form-group" id="fg-name">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group" id="fg-email">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group" id="fg-service">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="">Select a service…</option>
+            <option value="portrait">Portrait Session</option>
+            <option value="event">Event Film</option>
+            <option value="commercial">Commercial Shoot</option>
+            <option value="shortfilm">Short Film</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group" id="fg-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full" id="form-submit">Send Message</button>
+        <p class="form-success" id="form-success">&#10003; Message sent! I'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#home" class="logo logo--sm">
+        <span class="logo__king">King</span><span class="logo__berur">BerurInc</span>
+      </a>
+      <p class="footer__copy">&copy; 2026 KingBerurInc. All rights reserved. Ryan Berur.</p>
+      <nav class="footer__nav">
+        <a href="#portfolio" id="footer-portfolio">Portfolio</a>
+        <a href="#about" id="footer-about">About</a>
+        <a href="#contact" id="footer-contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
